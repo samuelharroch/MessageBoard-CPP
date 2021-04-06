@@ -23,7 +23,7 @@ namespace ariel {
     {
     }
 
-    void Board::post (unsigned int row, unsigned int column, Direction direction, string message){
+    void Board::post (unsigned int row, unsigned int column, Direction direction, const string &message){
 
         if (direction== Direction::Horizontal)
         {
