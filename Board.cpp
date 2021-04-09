@@ -62,8 +62,9 @@ namespace ariel {
 
     void Board::show(){
         
-        if(this->board.empty()){
-            cout << "1: ____________\n.\n.\n.\nUNIT_MAX: ____________"<< endl;
+        if(this->board.empty()  || m_left == UINT_MAX){
+            cout << "1:        ____________\n.\n.\n.\nUNIT_MAX: ____________"<< endl;
+            return ;
         }
         for (unsigned int row = m_up; row <= m_down; row++)
         {
@@ -75,6 +76,14 @@ namespace ariel {
              cout << "\n";
         }
         
+    }
+
+    void Board::getLimits() const {
+
+        cout << "left limit: " << m_left ; 
+        cout << ", right limit: " << m_right ; 
+        cout << ", up limit: " << m_up ;
+        cout<< ", down limit: " <<  m_down;
     }
 
 }

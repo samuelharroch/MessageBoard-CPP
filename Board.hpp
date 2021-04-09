@@ -33,6 +33,8 @@ namespace ariel {
         std::string read(unsigned int row, unsigned int column, Direction direction, unsigned int  length);
 
         void show();
+
+        void getLimits() const ;
     };
     
     
